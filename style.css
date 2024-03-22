@@ -140,6 +140,7 @@ nav ul li a.active {
   width: 512px;
   height: 542px;
   margin-left: 100px;
+  margin-top: 12px;
   
 }
 
@@ -241,7 +242,7 @@ nav ul li a.active {
 
   .Section_top{
     width: 100%;
-    height: 100vh;
+    height: 100px;
     overflow: hidden;
     position: relative;
     background-size: cover;
