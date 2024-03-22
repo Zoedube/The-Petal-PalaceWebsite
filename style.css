@@ -50,6 +50,11 @@
     display: flex;
     order: 2;
   }
+
+  nav ul li{
+    display: inline-block;
+    margin: 0 5px;
+  }
   
   nav ul li a{
     color: black;
@@ -63,18 +68,6 @@ nav ul li a.active {
     color: rgb(252, 165, 4);
     font-weight: 580;
 }
-  
-  .container_hero{
-    height: 600px;
-    padding: 20px;
-    margin-left: 40px;
-    margin-right: 40px;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
-  }
 
    /* Products dropdown menu */
    .dropdown_products {
@@ -101,6 +94,18 @@ nav ul li a.active {
   .dropdown_products:hover .dropdown_content {
     display: block;
   }
+
+  .container_hero{
+    height: 600px;
+    padding: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+  }
   
   .hero-text{
     width: 100%;
@@ -117,7 +122,7 @@ nav ul li a.active {
     margin-bottom: 12px;
   }
 
-   /*Page content*/
+   /* Page content Weddings / Bouquets / Gift Set */
 .container .page_content{
   padding-top: 10px;
   padding-bottom: 10px;
@@ -139,7 +144,7 @@ nav ul li a.active {
   justify-content: space-between;
   width: 512px;
   height: 542px;
-  margin-left: 100px;
+  margin-left: 50px;
   margin-top: 12px;
   
 }
@@ -224,25 +229,61 @@ nav ul li a.active {
   }
   
   @media (max-width:1000px) {
-    .container{
-      margin-top: 10px;
+    .container_hero{
+      margin-top: 150px;
       flex-direction: column;
     }
   
     .hero-text{
-      width:100%;
+      width:80%;
       text-align: center;
     }
   
     .hero-text h1{
-      font-size: 3rem;
-  
+      font-size: 2rem;
     }
+
+    .hero-text p{
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+    }
+  
   }
+/*
+  .container_hero{
+    height: 600px;
+    padding: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .hero-text{
+    width: 100%;
+  }
+  
+  .hero-text h1{
+    font-size: 3.3rem;
+    margin-bottom: 8px;
+    color: black;
+  }
+  
+  .hero-text p{
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+  }
+
+*/
+
+
 
   .Section_top{
     width: 100%;
-    height: 100px;
+    height: 100vh;
     overflow: hidden;
     position: relative;
     background-size: cover;
@@ -279,12 +320,12 @@ nav ul li a.active {
 /*Menu Bar*/
 .menu_btn {
     font-size: 30px;
+    color: #000;
     float: right;
-    margin-right: 20px;
-    padding-top: 18px;
+    line-height: 80px;
+    margin-right: 40px;
     cursor: pointer;
     display: none;
-    line-height: 80px;
 }
 
 #check {
@@ -478,10 +519,12 @@ nav ul li a.active {
 
 .wedding_table_h2 {
     text-align: center;   
+    font-size: 25px;
 }
 
 .wedding_table_para {
     text-align: center;
+    font-size: 20px;
 }
 
 .cards{
@@ -610,49 +653,6 @@ nav ul li a.active {
 .cards_content{
     margin-top: 300px;
     background-color: rgb(247, 243, 239);
-}
-
-
-
-
-
-/*MEDIA QUERIES*/
-@media (max-width: 952px) {
-    .logo img{
-        width: 180px;
-        height: auto;
-        padding-left: 20px;
-    }
-
-    .nav ul li a{
-        font-size: 20px;
-    }
-}
-
-@media (max-width: 738px) {
-    .menu_btn {
-        display: block;
-    }
-
-    ul{
-        position: fixed;
-        width: 100%;
-        height: auto;
-        background: #e2d3bc;
-        top: 140px;
-        left: -100%;
-        text-align: center;
-        transition: left 0.3s ease;
-    }
-
-    .nav ul li {
-        display: block;
- 
-    }
-
-    #check:checked ~ ul {
-        left: 0;
-    }
 }
 
 .map-container {
@@ -785,3 +785,94 @@ nav ul li a.active {
     color: black;
   
   }
+
+  /* MEDIA QUERIES*/
+
+  @media (max-width:1000px) {
+    .logo img{
+      width: 180px;
+      height: auto;
+      padding-left: 20px;
+  }
+
+  .nav ul li a{
+    font-size: 20px;
+}
+
+.menu_btn {
+  display: block;
+}
+
+ul{
+  position: fixed;
+  width: 100%;
+  height: 7vh;
+  background: #e2d3bc;
+  top: 142px;
+  left: -100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: left 0.3s ease;
+}
+
+.nav ul li {
+  display: block;
+  margin: 0;
+  line-height: 30px;
+}
+
+.nav ul li a{
+  font-size: 20px;
+}
+
+#check:checked ~ ul {
+  left: 0;
+}
+
+.container .page_content{
+  padding-top: 5px;
+  margin-top: 80px;
+}
+
+.image-row{
+  width: 300px;
+  height: 330px;
+  margin-left: 80px;
+  margin-top: 0;
+}
+
+.page_content a{
+  font-size: 23px;
+}
+
+.about{
+  padding: 80px 0;
+}
+
+.about h2{
+  font-size: 45px;
+}
+
+.about img{
+  width: 420px;
+  height: auto;
+}
+
+.about-text p{
+  font-size: 15px;
+  margin-left: 25px;
+  margin-bottom: 0;
+}
+
+
+  }
+
+
+  /*
+
+
+    
+    
+  
+  */
